@@ -1,7 +1,15 @@
 
+
 ## 💸 Minimal Personal Expense Logger
 
 A super lightweight personal expense tracker that logs data to Google Sheets, secured by a password prompt. Designed for **solo use**, hosted online but **accessible only to me**.
+
+---
+
+### 🌐 Live Site
+
+👉 [Open App](https://your-expense-app.onrender.com)
+
 
 ---
 
@@ -9,8 +17,8 @@ A super lightweight personal expense tracker that logs data to Google Sheets, se
 
 * 🧾 Log **Debit** or **Credit** entries with name, amount, and optional notes
 * 🗃 Stores data directly in a **Google Sheet**
-* 🔐 Password protected with client-side auth and backend verification
-* 🌐 Can be deployed on any Node.js-friendly platform (Render, Vercel with serverless, etc.)
+* 🔐 Password protected with backend verification
+* 🌐 Can be deployed on any Node.js-friendly platform (Render, Vercel, etc.)
 
 ---
 
@@ -18,37 +26,36 @@ A super lightweight personal expense tracker that logs data to Google Sheets, se
 
 * **Frontend:** HTML + CSS + Vanilla JS
 * **Backend:** Node.js + Express
-* **Storage:** Google Sheets via `google-spreadsheet` package
-* **Auth:** Custom password check via `.env` and backend validation
+* **Storage:** Google Sheets via `google-spreadsheet`
+* **Auth:** Custom password validation via backend and `.env`
 
 ---
 
-### 🔑 Security
+### 🔐 Security
 
-* The password is never stored in the frontend
-* Verified via a protected server route using environment variables
-* Basic security intended for private use only — not built for multi-user access
+* Password is checked only on the server
+* Never exposed in dev tools
+* Perfect for private use (not multi-user or enterprise-grade security)
 
 ---
 
-### 📦 Setup
+### 🛠️ Setup Instructions
 
 
-
-2. **Install dependencies**
+ **Install dependencies**
 
 ```bash
 npm install
 ```
 
-3. **Create a `.env` file**
+ **Create a `.env` file**
 
-```
+```env
 PASSWORD=your-secret-password
 
 ```
 
-4. **Deploy or run locally**
+ **Run locally**
 
 ```bash
 node server.js
@@ -56,14 +63,22 @@ node server.js
 
 ---
 
-### ✅ Todo
+### ✅ Roadmap
 
-* [x] Log entries to Google Sheets
-* [x] Secure with a password
-* [ ] Add monthly total summary
-* [ ] Export CSV or PDF
-* [ ] Add categories or filters
+* [x] Log expenses to Google Sheets
+* [x] Password-protected access
+* [ ] Monthly total summary
+* [ ] Export to CSV
+* [ ] Add spending categories and filters
 
 ---
 
+
+
+### 📌 Footer
+
+Made with 💻 by **Samarpan**
+🔗 [Portfolio](https://owsam22.github.io/portfolio/)
+🐙 [GitHub](https://github.com/owsam22)
+💼 [LinkedIn](https://linkedin.com/in/samarpan22)
 
