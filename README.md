@@ -8,7 +8,7 @@ A super lightweight personal expense tracker that logs data to Google Sheets, se
 
 ### 🌐 Live Site
 
-👉 [Open App](https://your-expense-app.onrender.com)
+👉 [Open App](https://expensetracker1-5642.onrender.com/)
 
 
 ---
