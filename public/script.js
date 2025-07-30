@@ -7,7 +7,7 @@ document.querySelector(".expense-form").addEventListener("submit", async functio
   const reason = form.reason.value;
   const person = form.person.value;
 
-  const url = `https://script.google.com/macros/s/AKfycbyooQ78Htka-qTCI3-6kbDeiYIezEoTuy5kwm3kpDqfwu-sk5ZyfQJwDGGcn-Ci7jHH/exec?amount=${encodeURIComponent(amount)}&type=${encodeURIComponent(type)}&reason=${encodeURIComponent(reason)}&person=${encodeURIComponent(person)}`;
+  const url = `https://script.google.com/macros/s/ADD_YOUR_SHEET_URL/exec?amount=${encodeURIComponent(amount)}&type=${encodeURIComponent(type)}&reason=${encodeURIComponent(reason)}&person=${encodeURIComponent(person)}`;
 
   document.querySelector(".loader").style.display = "block";
   document.querySelector(".form-message").textContent = "";
