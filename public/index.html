@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrackIt - Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="authOverlay" class="overlay">
+  <div class="auth-box">
+    <h2>Enter Password</h2>
+    <input type="password" id="passwordInput" placeholder="Password" />
+    <button onclick="verifyPassword()">Enter</button>
+    <div id="authError" class="error-message"></div>
+  </div>
+</div>
+
+  <nav>
+    <h1>💰 TrackIt</h1>
+    <span>Simple AI Expense Tracker</span>
+  </nav>
+
+  <main>
+    <section class="summary-box">
+      <h2>Total Spent in <span id="monthName">This Month</span></h2>
+      <div class="total-amount" id="totalDebit">₹0.00</div>
+    </section>
+
+    <h2>Log Your Expense</h2>
+    <form class="expense-form">
+      <label>Amount (₹)
+        <input type="number" name="amount" min="0.01" step="0.01" required />
+      </label>
+
+      <label>Type
+        <select name="type" required>
+          <option value="">Select</option>
+          <option value="Credit">Credit</option>
+          <option value="Debit">Debit</option>
+        </select>
+      </label>
+
+      <label>Reason
+        <input type="text" name="reason" maxlength="100" required />
+      </label>
+
+      <label>Person
+        <input type="text" name="person" maxlength="50" required />
+      </label>
+
+      <button type="submit">Submit</button>
+      <div class="loader" style="display:none;" id="loader">Submitting...</div>
+      <div class="form-message" id="formMessage"></div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
