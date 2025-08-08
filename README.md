@@ -76,9 +76,9 @@ node server.js
 
 
 
-### 📌 Footer
+### 
 
-Made with 💻 by **Samarpan**
+Made with ❣️ by **Samarpan**
 🔗 [Portfolio](https://owsam22.github.io/portfolio/)
 🐙 [GitHub](https://github.com/owsam22)
 💼 [LinkedIn](https://linkedin.com/in/samarpan22)
