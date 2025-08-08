@@ -52,6 +52,7 @@ npm install
 
 ```env
 PASSWORD=your-secret-password
+SCRIPT_URL=your-google-sheet-url
 
 ```
 
