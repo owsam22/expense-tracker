@@ -30,13 +30,25 @@
   width: 100%;
   padding: 0.5rem;
   margin-top: 1rem;
+  border-radius: 10px;
 }
 
 .auth-box button {
+  border: none;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #1f61c5;
+  color: white;
+  margin: 10px;
+  width: 100px;
+  font-size: large;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
+.auth-box button:hover{
+  background-color: #2668ca;
+  transform: scale(1.05);
+}
 .error-message {
   color: red;
   margin-top: 0.5rem;
@@ -186,4 +198,56 @@ button[type="submit"]:hover {
   text-align: center;
   margin-top: 10px;
   font-weight: 500;
+}
+
+
+.footer {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+.footer-content h2 {
+  margin-bottom: 8px;
+}
+
+.footer-content p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.social-links {
+  margin: 15px 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+.copy {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .footer-content p {
+    font-size: 0.85rem;
+  }
+  .social-links a {
+    font-size: 1.3rem;
+    margin: 0 8px;
+  }
 }
