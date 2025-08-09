@@ -1,3 +1,4 @@
+
 async function getScriptUrl() {
   const res = await fetch('/get-script-url');
   const data = await res.json();
@@ -32,6 +33,16 @@ document.querySelector(".expense-form").addEventListener("submit", async functio
   document.querySelector(".loader").style.display = "none";
 });
 
+
+const passwordInput = document.getElementById('passwordInput');
+
+// Detect Enter key press
+passwordInput.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault(); // prevent default form submission
+    verifyPassword();   // call your function
+  }
+});
 function verifyPassword() {
   const password = document.getElementById('passwordInput').value;
   fetch('/check-password', {
@@ -39,18 +50,17 @@ function verifyPassword() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ password }),
   })
-  .then(res => res.json())
-  .then(data => {
-    if (data.success) {
-      document.getElementById('authOverlay').style.display = 'none';
-    } else {
-      document.getElementById('authError').textContent = 'Incorrect password';
-    }
-  });
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        document.getElementById('authOverlay').style.display = 'none';
+      } else {
+        document.getElementById('authError').textContent = 'Incorrect password';
+      }
+    });
 }
 
-
-// Expand/collapse
+// Expand/collapse button
 document.getElementById("expandBtn").addEventListener("click", () => {
   const extra = document.getElementById("extraInfo");
   const btn = document.getElementById("expandBtn");
@@ -62,3 +72,32 @@ document.getElementById("expandBtn").addEventListener("click", () => {
     btn.textContent = "Expand ▼";
   }
 });
+
+
+
+async function getSheetUrl() {
+  const res = await fetch('/get-sheet-url');
+  const data = await res.json();
+  return data.url;
+}
+
+async function loadSummaryData() {
+  try {
+    const sheetURL = await getSheetUrl();
+    const res = await fetch(sheetURL);
+    const text = await res.text();
+    const rows = text.trim().split("\n").map(r => r.split(","));
+
+    const credit = rows[2][5]; // F3
+    const debit = rows[2][6]; // G3
+    const balance = rows[2][7]; // H3
+
+    document.getElementById("totalCredit").textContent = `₹${Number(credit).toLocaleString()}`;
+    document.getElementById("totalDebit").textContent = `₹${Number(debit).toLocaleString()}`;
+    document.getElementById("totalBalance").textContent = `₹${Number(balance).toLocaleString()}`;
+  } catch (err) {
+    console.error("Error fetching summary:", err);
+  }
+}
+
+loadSummaryData();
