@@ -1,6 +1,6 @@
 
 
-## 💸 Minimal Personal Expense Logger (currently working on it)
+## 💸 Minimal Personal Expense Logger 
 
 A super lightweight personal expense tracker that logs data to Google Sheets, secured by a password prompt. Designed for **solo use**, hosted online but **accessible only to me**.
 
