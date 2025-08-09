@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrackIt - Expense Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div id="authOverlay" class="overlay">
-  <div class="auth-box">
-    <h2>Enter Password</h2>
-    <input type="password" id="passwordInput" placeholder="Password" />
-    <button onclick="verifyPassword()">Enter</button>
-    <div id="authError" class="error-message"></div>
+    <div class="auth-box">
+      <h2>Enter Password</h2>
+      <input type="password" id="passwordInput" placeholder="Password" />
+      <button onclick="verifyPassword()">Enter</button>
+      <div id="authError" class="error-message"></div>
+    </div>
   </div>
-</div>
 
   <nav>
     <h1>💰 TrackIt</h1>
@@ -22,23 +24,24 @@
   </nav>
 
   <main>
-<section class="summary-box">
-  <h2>Total Spent in <span id="monthName">This Month</span></h2>
-  <div class="total-amount" id="totalDebit">₹0.00</div>
-  
-  <button id="expandBtn">Expand ▼</button>
-  
-  <div id="extraInfo" style="display: none;">
-    <div class="info-row">
-      <span>Total Credit:</span>
-      <span id="totalCredit">₹0.00</span>
-    </div>
-    <div class="info-row">
-      <span>Total Balance:</span>
-      <span id="totalBalance">₹0.00</span>
-    </div>
-  </div>
-</section>
+    <section class="summary-box">
+      <h2>Total Spent in <span id="monthName">This Month</span></h2>
+      <div class="total-amount" id="totalDebit">₹0.00</div>
+
+      <button id="expandBtn">Expand ▼</button>
+
+
+      <div id="extraInfo" style="display: none;">
+        <div class="info-row">
+          <span>Total Credit:</span>
+          <span id="totalCredit">₹0.00</span>
+        </div>
+        <div class="info-row">
+          <span>Total Balance:</span>
+          <span id="totalBalance">₹0.00</span>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -70,7 +73,37 @@
     </form>
   </main>
 
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>💰 TrackIt</h2>
+      <p>Helping you track, save, and spend smarter — built by <strong>Sam</strong>.</p>
+
+      <div class="social-links">
+        <a href="https://github.com/owsam22" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/samarpan22" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/owsam22" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <p class="copy">© <span id="year"></span> TrackIt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
