@@ -52,7 +52,8 @@ npm install
 
 ```env
 PASSWORD=your-secret-password
-SCRIPT_URL=your-google-sheet-url
+SCRIPT_URL=your-google-script-url
+SHEET_URL=your-sheet-url
 
 ```
 
@@ -68,7 +69,7 @@ node server.js
 
 * [x] Log expenses to Google Sheets
 * [x] Password-protected access
-* [ ] Monthly total summary
+* [x] Monthly total summary
 * [ ] Export to CSV
 * [ ] Add spending categories and filters
 
