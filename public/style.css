@@ -150,6 +150,39 @@ main {
   border-color: #10b981;
   box-shadow: 0 0 0 3px #d1fae5;
 }
+
+.chart-container {
+  max-width: 800px;   /* neat on desktops */
+  width: 100%;
+  margin: 20px auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.chart-image {
+  max-width: 100%;
+  height: auto;      /* preserves aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease;
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+
+
+
+.info-row{
+  padding-top: 2%;
+}
+#totalCredit{
+  color: #0bac76;
+  font-size: large;
+}
+#totalBalance{
+  color:#0e6e9a;
+  font-size: large;
+}
 /* Log Box Styling */
 .log-box {
   background: #f0fdfa; /* matches your summary box */
