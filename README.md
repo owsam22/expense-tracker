@@ -70,8 +70,8 @@ node server.js
 * [x] Log expenses to Google Sheets
 * [x] Password-protected access
 * [x] Monthly total summary
+* [x] Add spending categories and filters
 * [ ] Export to CSV
-* [ ] Add spending categories and filters
 
 ---
 
