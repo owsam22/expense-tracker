@@ -29,7 +29,7 @@ document.querySelector(".expense-form").addEventListener("submit", async functio
   } catch (err) {
     document.querySelector(".form-message").textContent = "Failed to submit. Try again.";
   }
-
+  loadSummaryData();
   document.querySelector(".loader").style.display = "none";
 });
 
