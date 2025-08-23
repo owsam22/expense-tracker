@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrackIt - Expense Tracker</title>
-  <link rel="icon" type="image/png" href="https://images.openai.com/thumbnails/url/NKSlHHicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4M8TfLSzWJj8xxKvHydjM3LzAp9k3NifI1Mklz9g0pyygMrvQpMDTyicyujHJMy4mqMgnN88h1yvNWKwYAuIIpGg">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://images.openai.com/thumbnails/url/NKSlHHicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4M8TfLSzWJj8xxKvHydjM3LzAp9k3NifI1Mklz9g0pyygMrvQpMDTyicyujHJMy4mqMgnN88h1yvNWKwYAuIIpGg">
+
 </head>
 
 <body>
@@ -44,34 +45,79 @@
       </div>
     </section>
 
+<section class="log-box">
+  <h2>Log Your Expense</h2>
+</section>
 
+<form class="expense-form">
 
-    <h2>Log Your Expense</h2>
-    <form class="expense-form">
-      <label>Amount (₹)
-        <input type="number" name="amount" min="0.01" step="0.01" required />
-      </label>
+  <!-- Amount -->
+  <div class="form-group">
+    <label for="amount">Amount (₹)</label>
+    <input 
+      type="number" 
+      id="amount" 
+      name="amount" 
+      min="0.01" 
+      step="0.01" 
+      placeholder="Enter amount" 
+      required 
+    />
+  </div>
 
-      <label>Type
-        <select name="type" required>
-          <option value="">Select</option>
-          <option value="Credit">Credit</option>
-          <option value="Debit">Debit</option>
-        </select>
-      </label>
+  <!-- Type -->
+  <div class="form-group">
+    <label for="type">Type</label>
+    <select id="type" name="type" required>
+      <option value="Debit">Debit</option>
+      <option value="Credit">Credit</option>
+    </select>
+  </div>
 
-      <label>Reason
-        <input type="text" name="reason" maxlength="100" required />
-      </label>
+  <!-- Reason -->
+  <div class="form-group">
+    <label for="reasonInput">Reason</label>
+    <input 
+      type="text" 
+      id="reasonInput" 
+      name="reason" 
+      placeholder="Type or select reason..." 
+      list="reasonList" 
+      autocomplete="off" 
+      required 
+    />
+    <datalist id="reasonList">
+      <option value="Food & Drink">
+      <option value="Travel">
+      <option value="Rent">
+      <option value="Recharge">
+      <option value="Stationery">
+      <option value="Shopping">
+    </datalist>
+  </div>
 
-      <label>Person
-        <input type="text" name="person" maxlength="50" required />
-      </label>
+  <!-- Person -->
+  <div class="form-group">
+    <label for="person">Person</label>
+    <input 
+      type="text" 
+      id="person" 
+      name="person" 
+      maxlength="50" 
+      placeholder="Who was involved?" 
+      required 
+    />
+  </div>
 
-      <button type="submit">Submit</button>
-      <div class="loader" style="display:none;" id="loader">Submitting...</div>
-      <div class="form-message" id="formMessage"></div>
-    </form>
+  <!-- Submit -->
+  <div class="form-actions">
+    <button type="submit" class="submit-btn">💾 Submit</button>
+    <div class="loader" style="display:none;" id="loader">⏳ Submitting...</div>
+  </div>
+
+  <div class="form-message" id="formMessage"></div>
+</form>
+
   </main>
 
 
@@ -84,13 +130,13 @@
       <p>Helping you track, save, and spend smarter — built by <strong>Sam</strong>.</p>
 
       <div class="social-links">
-        <a href="https://github.com/owsam22" target="_blank" aria-label="GitHub">
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/samarpan22" target="_blank" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://instagram.com/owsam22" target="_blank" aria-label="Instagram">
+        <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
@@ -108,4 +154,3 @@
 </body>
 
 </html>
-
