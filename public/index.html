@@ -13,11 +13,12 @@
 </head>
 
 <body>
+  <!-- 🔒 Auth Overlay -->
   <div id="authOverlay" class="overlay">
     <div class="auth-box">
-      <h2>Enter Password</h2>
-      <input type="password" id="passwordInput" placeholder="Password" />
-      <button onclick="verifyPassword()">Enter</button>
+      <h2>🔑 Enter Password</h2>
+      <input type="password" id="passwordInput" placeholder="Password" aria-label="Password" />
+      <button onclick="verifyPassword()"><i class="fa-solid fa-unlock"></i> Enter</button>
       <div id="authError" class="error-message"></div>
     </div>
   </div>
